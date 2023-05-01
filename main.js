@@ -1,24 +1,15 @@
 const config = {
     type: Phaser.AUTO,
-    width: 6400,
-    height: 6400,
-    parent: 'game-container',
+    width: 1600, // Set the canvas width
+    height: 900, // Set the canvas height
     scene: [GameScene],
-    backgroundColor: '#1a1a2d'
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 0 },
+            debug: false
+        }
+    }
 };
 
-
 const game = new Phaser.Game(config);
-
-function preload() {
-    this.load.spritesheet('plowed_soil', 'assets/submission_daneeklu/tilesets/plowed_soil.png', { frameWidth: 96 , frameHeight: 192 });
-}
-
-
-function create() {
-    // Set up the game world here
-}
-
-function update() {
-    // Game logic and updates go here
-}
